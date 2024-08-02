@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Caesar Cipher</title>
+  </head>
+  <body>
+    <h1>Caesar Cipher</h1>
+    <p><label for="plain_text">Enter text to encode/decode:</label></p>
+    <textarea name="plain_text" id="plain_text" rows="20" cols="60"></textarea
+    ><br /><br />
+    <label for="shift_amount">Shift amount:</label>
+    <input type="text" name="shift_amount" id="shift_amount" />
+    <br /><br />
+
+    <input
+      type="radio"
+      id="encode"
+      name="direction_type"
+      value="encode"
+      checked
+    />
+    <label for="encode">Encode</label>
+    <br />
+    <input type="radio" id="decode" name="direction_type" value="decode" />
+    <label for="decode">Decode</label>
+    <br /><br />
+    <button type="submit">Submit</button>
+
+    <br /><br />
+    <p><label for="output">Output:</label></p>
+    <textarea name="output" id="ouput" rows="20" cols="60"></textarea>
+  </body>
+</html>
