@@ -7,6 +7,7 @@
   </head>
   <body>
     <h1>Caesar Cipher</h1>
+
     <p><label for="plain_text">Enter text to encode/decode:</label></p>
     <textarea name="plain_text" id="plain_text" rows="20" cols="60"></textarea
     ><br /><br />
@@ -14,22 +15,18 @@
     <input type="text" name="shift_amount" id="shift_amount" />
     <br /><br />
 
-    <input
-      type="radio"
-      id="encode"
-      name="direction_type"
-      value="encode"
-      checked
-    />
+    <input type="radio" name="direction_type" id="encode" value="encode" />
     <label for="encode">Encode</label>
     <br />
-    <input type="radio" id="decode" name="direction_type" value="decode" />
+    <input type="radio" name="direction_type" id="decode" value="decode" />
     <label for="decode">Decode</label>
     <br /><br />
-    <button type="submit">Submit</button>
+    <button type="submit" onclick="getValue()">Submit</button>
 
     <br /><br />
     <p><label for="output">Output:</label></p>
-    <textarea name="output" id="ouput" rows="20" cols="60"></textarea>
+    <textarea name="output" id="output" rows="20" cols="60"></textarea>
+
+    <script src="script.js"></script>
   </body>
 </html>
