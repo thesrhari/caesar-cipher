@@ -28,7 +28,7 @@ textarea{
     field-sizing: content;
     resize: none;
     min-height: 20lh;
-    min-width: 30lh;
+    width: 30lh;
     background-color: #dddddd;
     border-radius: 10px;
     border: 2px solid transparent;
@@ -41,7 +41,7 @@ textarea{
 @media (max-width: 480px){
     textarea{
         min-height: 10lh;
-        min-width: 15lh;
+        width: 15lh;
     }
 }
 
