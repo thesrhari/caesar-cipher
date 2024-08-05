@@ -4,28 +4,81 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Caesar Cipher</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>Caesar Cipher</h1>
+    <div class="title">
+      <h1>Caesar Cipher</h1>
+    </div>
+    <div class="container">
+      <div>
+        <div class="input_field">
+          <p><label for="plain_text">Enter text to encode/decode:</label></p>
+          <textarea
+            name="plain_text"
+            id="plain_text"
+            rows="20"
+            cols="60"
+          ></textarea>
+        </div>
 
-    <p><label for="plain_text">Enter text to encode/decode:</label></p>
-    <textarea name="plain_text" id="plain_text" rows="20" cols="60"></textarea
-    ><br /><br />
-    <label for="shift_amount">Shift amount:</label>
-    <input type="text" name="shift_amount" id="shift_amount" />
-    <br /><br />
+        <div>
+          <label for="shift_amount">Shift amount:</label>
+          <input
+            type="number"
+            name="shift_amount"
+            id="shift_amount"
+            class="shift_amount"
+          />
 
-    <input type="radio" name="direction_type" id="encode" value="encode" />
-    <label for="encode">Encode</label>
-    <br />
-    <input type="radio" name="direction_type" id="decode" value="decode" />
-    <label for="decode">Decode</label>
-    <br /><br />
-    <button type="submit" onclick="getValue()">Submit</button>
+          <div class="radio_buttons">
+            <div>
+              <input
+                type="radio"
+                name="direction_type"
+                class="direction_type"
+                id="encode"
+                value="encode"
+              />
+              <label for="encode">Encode</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="direction_type"
+                class="direction_type"
+                id="decode"
+                value="decode"
+              />
+              <label for="decode">Decode</label>
+            </div>
+          </div>
 
-    <br /><br />
-    <p><label for="output">Output:</label></p>
-    <textarea name="output" id="output" rows="20" cols="60"></textarea>
+          <button type="submit" class="submit_button" onclick="getValue()">
+            Submit
+          </button>
+        </div>
+      </div>
+
+      <div>
+        <p><label for="output">Output:</label></p>
+        <textarea
+          name="output"
+          id="output"
+          rows="20"
+          cols="60"
+          readonly
+        ></textarea>
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>
