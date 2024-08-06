@@ -60,7 +60,7 @@ textarea{
     gap: 10px;
 }
 
-.direction_type{
+input[type=radio]{
     margin-bottom: 10px;
     accent-color: #A91D3A;
 }

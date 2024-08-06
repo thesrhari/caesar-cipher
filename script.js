@@ -1,5 +1,8 @@
-const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p',
+const lower_alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p',
     'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+const capital_alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P',
+    'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 
 
 // Encoding and decoding happens here
@@ -11,15 +14,28 @@ function caesar(text, shift, direction){
         shift *= -1;
     }
     for (const letter of text){
-        if (alphabet.includes(letter)){
-            const position = alphabet.indexOf(letter);
-            const shifted_position = position + shift;
-            const alphabet_length = alphabet.length;
+        if ((lower_alphabet.includes(letter)) || capital_alphabet.includes(letter)){
 
-            // Calling mod() func
-            const new_position = mod(shifted_position, alphabet_length);
+            if (letter === letter.toUpperCase()){
+                const position = capital_alphabet.indexOf(letter);
+                const shifted_position = position + shift;
+                const alphabet_length = capital_alphabet.length;
 
-            caesar_text += alphabet[new_position];
+                // Calling mod() func
+                const new_position = mod(shifted_position, alphabet_length);
+
+                caesar_text += capital_alphabet[new_position];
+            }
+            else{
+                const position = lower_alphabet.indexOf(letter);
+                const shifted_position = position + shift;
+                const alphabet_length = lower_alphabet.length;
+
+                // Calling mod() func
+                const new_position = mod(shifted_position, alphabet_length);
+
+                caesar_text += lower_alphabet[new_position];
+            }
         }
         else{
             caesar_text += letter
